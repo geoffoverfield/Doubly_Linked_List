@@ -61,7 +61,7 @@ void LinkedList<T>::ListInsert(T a)
 		curr = newNode;
 		tail = curr;
 		tail->next = head;
-		newNode->num = a;
+		newNode->data = a;
 	}
 	else
 	{
@@ -69,7 +69,7 @@ void LinkedList<T>::ListInsert(T a)
 		newNode->prev = curr;
 		curr = newNode;
 		tail = curr;
-		newNode->num = a;
+		newNode->data = a;
 	}
 	size = newLength;
 }
@@ -100,7 +100,7 @@ void LinkedList<T>::ListDisplay()
 {
 	for (Node<T> *current = head; current != NULL; current = current->next)
 	{
-		cout << "Current Node Data:\t" << current->num << endl;
+		cout << "Current Node Data:\t" << current->data << endl;
 		cout << "Current Node Address:\t" << current << endl;
 		cout << "Next Node Address:\t" << current->next << endl << endl;
 		cout << "*****************************************************" << endl << endl;
@@ -112,12 +112,12 @@ void LinkedList<T>::ReverseDisplay()
 {
 	for (Node<T> *current = tail; current != head; current = current->prev)
 	{
-		cout << "Current Node Data:\t" << current->num << endl;
+		cout << "Current Node Data:\t" << current->data << endl;
 		cout << "Current Node Address:\t" << current << endl;
 		cout << "Next Node Address:\t" << current->prev << endl << endl;
 		cout << "*****************************************************" << endl << endl;
 	}
-	cout << "Current Node Data:\t" << head->num << endl;
+	cout << "Current Node Data:\t" << head->data << endl;
 	cout << "Current Node Address:\t" << head << endl;
 	cout << "Next Node Address:\t" << head->prev << endl << endl;
 	cout << "*****************************************************" << endl << endl;

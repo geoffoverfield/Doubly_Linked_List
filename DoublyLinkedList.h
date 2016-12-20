@@ -22,7 +22,7 @@ public:
 	}
 };
 
-teamplate <class T>
+template <class T>
 class LinkedList
 {
 public:
@@ -41,16 +41,16 @@ private:
 	Node<T> *tail = NULL;
 };
 
-teamplate <class T>
+template <class T>
 LinkedList<T>::LinkedList():size(0), head(NULL){}
 
-teamplate <class T>
+template <class T>
 int LinkedList<T>::ListLength()
 {
 	return size;
 }
 
-teamplate <class T>
+template <class T>
 void LinkedList<T>::ListInsert(T a)
 {
 	int newLength = ListLength() + 1;
@@ -74,7 +74,7 @@ void LinkedList<T>::ListInsert(T a)
 	size = newLength;
 }
 
-teamplate <class T>
+template <class T>
 void LinkedList<T>::ListDelete(T b)
 {
 	int pos = 1;
@@ -95,7 +95,7 @@ void LinkedList<T>::ListDelete(T b)
 
 }
 
-teamplate <class T>
+template <class T>
 void LinkedList<T>::ListDisplay()
 {
 	for (Node<T> *current = head; current != NULL; current = current->next)
@@ -107,7 +107,7 @@ void LinkedList<T>::ListDisplay()
 	}
 }
 
-teamplate <class T>
+template <class T>
 void LinkedList<T>::ReverseDisplay()
 {
 	for (Node<T> *current = tail; current != head; current = current->prev)
@@ -123,7 +123,7 @@ void LinkedList<T>::ReverseDisplay()
 	cout << "*****************************************************" << endl << endl;
 }
 
-teamplate <class T>
+template <class T>
 Node<T> *LinkedList<T>::PointTo(T pos)
 {
 	if ((pos<1) || (pos > ListLength())) return NULL;
